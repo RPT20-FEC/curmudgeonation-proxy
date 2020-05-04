@@ -1,0 +1,18 @@
+body {
+  background-color: white;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.bed-icons, .amenity-icon, .feature-icon {
+  display: block;
+  height: 24px;
+  width: 24px;
+  fill: currentcolor;
+}
+
+.share-icon, .save-icon, .superhost-badge {
+  display: block;
+  height: 16px;
+  width: 16px;
+  fill: currentcolor;
+}

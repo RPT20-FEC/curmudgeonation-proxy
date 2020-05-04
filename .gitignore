@@ -24,3 +24,7 @@ coverage
 build/
 dist/
 
+# Environment variables, tokens, etc.
+.env
+
+

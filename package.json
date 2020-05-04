@@ -1,17 +1,26 @@
 {
-  "name": "",
-  "version": "",
-  "description": "",
-  "author": "",
+  "name": "curmudgeonation-proxy",
+  "version": "0.1.0",
+  "description": "Proxy server for FEC",
+  "author": "Justin Anderson",
   "license": "",
   "engines": {
-    "node": ">=6.13.0"
+    "node": ">=12.16.2"
   },
   "scripts": {
+    "start": "nodemon --inspect server/start.js"
   },
   "dependencies": {
+    "express": "^4.17.1",
+    "mongoose": "^5.9.9",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-router-dom": "^5.1.2",
+    "styled-components": "^5.1.0"
   },
   "devDependencies": {
-    "eslint-config-hackreactor": "git://github.com/reactorcore/eslint-config-hackreactor"
+    "eslint-config-hackreactor": "git://github.com/reactorcore/eslint-config-hackreactor",
+    "morgan": "^1.10.0",
+    "nodemon": "^2.0.3"
   }
 }

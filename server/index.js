@@ -3,12 +3,14 @@ const fs = require('fs');
 const bodyParser = require('body-parser');
 const path = require('path');
 
+const API_URL = 'http://localhost:3000';
+
 const app = express();
 
 
 app.use(bodyParser.json());
 
-app.use(express.static(__dirname + '/../client/public'));
+app.use(express.static(__dirname + '/../public'));
 
 app.use((req, res, next) => {
   res.header('Access-Control-Allow-Origin', '*');
@@ -19,14 +21,14 @@ app.use((req, res, next) => {
   next();
 });
 
-// default route handler
-app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname + '../public/not_found.html'));
-});
+//handle browser request for style sheet
+// app.get('/style.css', (req, res) => {
+//   res.sendFile(path.join(__dirname + '/../public/style.css'));
+// });
 
 // GET listing page
 app.get('/:id', (req, res) => {
-  res.sendFile(path.join(__dirname + '../public/index.html'));
+  res.sendFile(path.join(__dirname + '/../public/index.html'));
 });
 
 module.exports = app;

@@ -1,7 +1,7 @@
 // require('dotenv').config();
 const app = require('./index.js');
-const port = 3005;
+const port = 3000;
 
 app.listen(port, () => {
-  console.log(`listening on port ${port}`);
+  console.log(`listening with nodemon on port ${port}`);
 });

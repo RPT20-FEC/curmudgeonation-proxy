@@ -1,6 +1,6 @@
 {
   "name": "curmudgeonation-proxy",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "Proxy server for FEC",
   "author": "Justin Anderson",
   "license": "",
@@ -8,7 +8,8 @@
     "node": ">=12.16.2"
   },
   "scripts": {
-    "start": "nodemon server/start.js"
+    "start": "node server/start.js",
+    "dev-start": "nodemon --inspect server/start.js"
   },
   "dependencies": {
     "express": "^4.17.1",

@@ -7,7 +7,6 @@ const API_URL = 'http://localhost:3000';
 
 const app = express();
 
-
 app.use(bodyParser.json());
 
 app.use(express.static(__dirname + '/../public'));
@@ -21,10 +20,10 @@ app.use((req, res, next) => {
   next();
 });
 
-//handle browser request for style sheet
-// app.get('/style.css', (req, res) => {
-//   res.sendFile(path.join(__dirname + '/../public/style.css'));
-// });
+// GET root
+app.get('/', (req, res) => {
+  res.sendFile(path.join(__dirname + '/../public/not_found.html'));
+});
 
 // GET listing page
 app.get('/:id', (req, res) => {
